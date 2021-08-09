@@ -28,7 +28,8 @@
         </v-col>
       </v-row>
     </v-container>
-
+    <ActivitiesMenu />
+    <MembershipTable />
     <PriceTables
       :activity="activity"
       :forKey="key"

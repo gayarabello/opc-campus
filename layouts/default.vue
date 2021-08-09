@@ -54,9 +54,6 @@
           ></v-select>
         </v-row>
       </v-container>
-
-      <!-- <v-toolbar-title v-text="title" /> -->
-      <!-- <v-spacer /> -->
     </v-app-bar>
     <v-main>
       <Nuxt />

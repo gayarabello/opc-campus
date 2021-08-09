@@ -1,7 +1,7 @@
 export const prices = {
     massage: {
         hash: "Wellness",
-        title: "Massage",
+        title: "massage",
         subtitle: "Your wellbeing in good hands",
         hero: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80",
         prices: {
@@ -51,7 +51,7 @@ export const prices = {
     },
     padel: {
         hash: "Activities",
-        title: "Padel",
+        title: "padel",
         hero: "https://images.unsplash.com/photo-1526888935184-a82d2a4b7e67?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80",
         subtitle: "Get your game on!",
         prices: {
@@ -134,8 +134,8 @@ export const prices = {
     },
     ioga: {
         hash: "Activities",
-        title: "Ioga",
-        hero: "https://images.unsplash.com/photo-1588783344727-f67e17b45dfc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1650&q=80",
+        title: "ioga",
+        hero: "https://images.unsplash.com/photo-1611094601537-cdbb75b979cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80",
         subtitle: "Train your soul",
         prices: {
             'group classes': [
@@ -198,7 +198,7 @@ export const prices = {
     },
     pilates: {
         hash: "Activities",
-        title: "Pilates",
+        title: "pilates",
         hero: "https://images.unsplash.com/photo-1604467731651-3d8b9c702b86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=668&q=80",
         subtitle: "1:1 specialized classes",
         prices: {
@@ -234,7 +234,7 @@ export const prices = {
     },
     fitness: {
         hash: "Activities",
-        title: "Fitness",
+        title: "fitness",
         hero: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
         subtitle: "Become the best version of yourself",
         prices: {

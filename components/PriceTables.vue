@@ -1,14 +1,24 @@
 <template>
-  <div class="mt-12 py-6">
+  <div :id="activity.title" class="mt-12 py-6">
     <v-row no-gutters align="center">
       <v-col
-        style="min-height: 320px"
+        :style="
+          $vuetify.breakpoint.smAndUp
+            ? 'min-height: 320px'
+            : 'min-height: 220px'
+        "
         class="blue-grey lighten-5 text-left align-center d-flex"
-        cols="6"
+        cols="12"
+        sm="6"
       >
         <v-row no-gutters>
-          <v-col cols="6"></v-col>
-          <v-col cols="6">
+          <v-col
+            v-if="$vuetify.breakpoint.smAndUp"
+            cols="6"
+            sm="2"
+            md="6"
+          ></v-col>
+          <v-col cols="12" sm="10" md="6" class="px-6 px-sm-0">
             <h4 class="blue-grey--text">#{{ activity.hash }}</h4>
             <h2 class="blue-grey--text text--darken-4 py-2">
               {{ activity.title }}
@@ -19,12 +29,12 @@
           </v-col>
         </v-row>
       </v-col>
-      <v-col cols="6">
+      <v-col v-if="$vuetify.breakpoint.smAndUp" cols="6">
         <v-img height="320" :src="activity.hero"></v-img>
       </v-col>
     </v-row>
     <div
-      class="mx-auto my-12"
+      class="mx-auto my-12 px-6 px-sm-0"
       style="max-width: 32rem"
       v-for="(type, key) in activity.prices"
       :key="key"
