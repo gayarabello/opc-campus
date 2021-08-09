@@ -1,77 +1,77 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
-      <v-card class="logo py-4 d-flex justify-center">
-        <NuxtLogo />
-        <VuetifyLogo />
-      </v-card>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
+  <div>
+    <v-container class="px-0 py-0" fluid>
+      <v-parallax
+        src="https://images.unsplash.com/photo-1562778612-e1e0cda9915c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3034&q=80"
+      >
+        <h1 class="text-center">
+          Live the <span class="font-weight-bold">good</span> life
+        </h1>
+      </v-parallax>
+    </v-container>
+    <v-container class="mid-cont my-12">
+      <v-row align="center">
+        <v-col cols="6">
+          <h4>Oporto Collection Campus</h4>
+          <h2>a place to reboot</h2>
           <p>
-            For more information on Vuetify, check out the <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              documentation
-            </a>.
+            Our set of activities is designed to make you rest, exercise and
+            celebrate life.
           </p>
-          <p>
-            If you have questions, please join the official <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="chat"
-            >
-              discord
-            </a>.
-          </p>
-          <p>
-            Find a bug? Report it on the github <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="contribute"
-            >
-              issue board
-            </a>.
-          </p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3">
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt Documentation
-          </a>
-          <br>
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn
-            color="primary"
-            nuxt
-            to="/inspire"
-          >
-            Continue
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-col>
-  </v-row>
+          <v-btn outlined>join the club</v-btn>
+        </v-col>
+        <v-col cols="6">
+          <v-img
+            height="400"
+            src="https://images.unsplash.com/photo-1534366381226-672074533fd3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2697&q=80"
+          ></v-img>
+        </v-col>
+      </v-row>
+    </v-container>
+
+    <PriceTables
+      :activity="activity"
+      :forKey="key"
+      v-for="(activity, key) in services"
+      :key="key"
+    />
+  </div>
 </template>
+<script lang="ts">
+import { prices } from '../data/prices'
+const PriceTables = () => import('../components/PriceTables.vue')
+import Vue from 'vue'
+export default Vue.extend({
+  components: { PriceTables },
+  data() {
+    return {
+      services: prices,
+    }
+  },
+})
+</script>
+
+<style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+h1 {
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 4rem;
+  line-height: 100%;
+  padding: 1rem 0;
+}
+h2 {
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 4rem;
+  line-height: 90%;
+  padding: 1rem 0;
+}
+.hero {
+  background-image: url('https://images.unsplash.com/photo-1598041072698-794501a5fedf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=701&q=80');
+  background-size: fit;
+  height: 32rem;
+}
+</style>

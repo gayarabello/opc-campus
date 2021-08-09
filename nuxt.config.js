@@ -42,18 +42,42 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-  ],
+  modules: ["@nuxtjs/i18n"],
+
+  i18n: {
+    locales: [
+      {
+        name: "EN",
+        code: "en",
+        iso: "en-US",
+        file: "en.js"
+      },
+      {
+        name: "PT",
+        code: "pt",
+        iso: "pt-PT",
+        file: "pt.js"
+      }
+    ],
+    strategy: "prefix_except_default",
+    defaultLocale: "en",
+    lazy: true,
+    langDir: "lang/",
+    vueI18n: {
+      fallbackLocale: "en",
+    },
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
-        dark: {
+        light: {
           primary: colors.blue.darken2,
           accent: colors.grey.darken3,
+          greyColor: colors.blueGrey.lighten5,
           secondary: colors.amber.darken3,
           info: colors.teal.lighten1,
           warning: colors.amber.base,
@@ -66,5 +90,11 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    babel: {
+      plugins: [
+        '@babel/plugin-proposal-class-properties',
+        '@babel/plugin-proposal-private-methods',
+      ],
+    },
   }
 }
