@@ -1,8 +1,8 @@
 <template functional>
   <div>
-    <h4>€{{ props.price.member }} members</h4>
+    <h4>€{{ props.price.member }} {{ props.member }}</h4>
     <h5 class="font-weight-regular">
-      €{{ props.price.nonMember }} non members
+      €{{ props.price.nonMember }} {{ props.nonmember }}
     </h5>
   </div>
 </template>

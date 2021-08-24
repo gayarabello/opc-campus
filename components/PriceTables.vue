@@ -19,12 +19,12 @@
             md="6"
           ></v-col>
           <v-col cols="12" sm="10" md="6" class="px-6 px-sm-0">
-            <h4 class="blue-grey--text">#{{ activity.hash }}</h4>
+            <h4 class="blue-grey--text">#{{ $t(activity.hash) }}</h4>
             <h2 class="blue-grey--text text--darken-4 py-2">
-              {{ activity.title }}
+              {{ $t(activity.title) }}
             </h2>
             <h3 class="blue-grey--text font-weight-regular">
-              {{ activity.subtitle }}
+              {{ $t(activity.subtitle) }}
             </h3>
           </v-col>
         </v-row>
@@ -53,10 +53,22 @@
       </h3>
 
       <div v-for="(item, index) in activity.prices[key]" :key="index">
-        <v-row class="py-2" no-gutters>
-          <v-col cols="6" class="text-capitalize"> {{ item.name }}</v-col>
-          <v-col cols="6" class="text-right">
-            <PriceUnity :price="item.price" />
+        <v-row class="py-3" no-gutters>
+          <v-col cols="7" sm="9">
+            <h4 class="text-capitalize">
+              {{ $t(item.name) }}
+            </h4>
+
+            <h5 class="font-weight-regular" v-if="item.description">
+              {{ $t(item.description) }}
+            </h5>
+          </v-col>
+          <v-col cols="5" sm="3" class="text-right">
+            <PriceUnity
+              :price="item.price"
+              :member="$tc('member', 2)"
+              :nonmember="$tc('nonMember', 2)"
+            />
           </v-col>
         </v-row>
         <v-divider v-if="index !== activity.prices[key].length - 1"></v-divider>

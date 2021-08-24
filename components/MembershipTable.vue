@@ -8,11 +8,13 @@
         font-weight-regular
       "
     >
-      #membership
+      #{{ $t('general.membership') }}
     </h3>
-    <h1 class="text-center blue-grey--text text--darken-3">join the club</h1>
+    <h1 class="text-center blue-grey--text text--darken-3">
+      {{ $t('joinTheClub') }}
+    </h1>
     <h5 class="text-center blue-grey--text text--lighten-1">
-      *Insurance included
+      {{ $t('membershipTable.insurance') }}
     </h5>
     <div class="my-6 mid-cont mx-auto">
       <v-row no-gutters class="py-0 px-3">
@@ -23,16 +25,16 @@
           cols="2"
           v-for="(price, index) in [
             {
-              name: 'annual',
-              price: 800,
+              name: 'general.annual',
+              price: 700,
             },
             {
-              name: '3 months',
-              price: 400,
-            },
-            {
-              name: 'monthly',
+              name: 'general.months3',
               price: 200,
+            },
+            {
+              name: 'general.monthly',
+              price: 80,
             },
           ]"
           :key="index"
@@ -47,7 +49,7 @@
           >
             €{{ price.price }}
           </h3>
-          <h5 class="blue--text text-uppercase">{{ price.name }}</h5>
+          <h5 class="blue--text text-uppercase">{{ $t(price.name) }}</h5>
         </v-col>
       </v-row>
       <v-row
@@ -60,10 +62,10 @@
       >
         <v-col cols="6">
           <h4 class="blue-grey--text text--darken-3 font-weight-regular">
-            {{ service.service }}
+            {{ $t(service.service) }}
           </h4>
         </v-col>
-        <!-- :class="{ shadow: index % 2 !== 0 }" -->
+
         <v-col
           class="py-3 text-center"
           cols="2"
@@ -72,14 +74,10 @@
         >
           <v-icon color="blue">mdi-check</v-icon>
         </v-col>
-        <!-- <v-col cols="12">
-          <v-divider></v-divider>
-        </v-col> -->
       </v-row>
 
       <v-row align="center" no-gutters class="py-0 px-3">
-        <v-col cols="6">Add one more member</v-col>
-        <!-- :class="{ shadow: index % 2 !== 0 }" -->
+        <v-col cols="6">{{ $t('membershipTable.addMember') }}</v-col>
         <v-col
           class="py-3 text-center"
           cols="2"
@@ -104,31 +102,31 @@
 <script>
 const services = [
   {
-    service: 'Acesso total às instalações do Campus e do Hotel',
+    service: 'membershipTable.step01',
     check: ['annual', 'quarterly', 'monthly'],
   },
   {
-    service: 'Prioridade em horários em aulas particulares de Padel',
+    service: 'membershipTable.step02',
     check: ['annual', 'quarterly', 'monthly'],
   },
   {
-    service: 'Prioridade em horários em aulas de Fitness e Pilates',
+    service: 'membershipTable.step03',
     check: ['annual', 'quarterly', 'monthly'],
   },
   {
-    service: 'Desconto de 20% em tratamentos Welness',
+    service: 'membershipTable.step04',
     check: ['annual', 'quarterly', 'monthly'],
   },
   {
-    service: 'Desconto de 25% no aluguer do campo de Padel',
+    service: 'membershipTable.step05',
     check: ['annual', 'quarterly'],
   },
   {
-    service: 'Descontos em packs Fitness, Pilates e Padel',
+    service: 'membershipTable.step06',
     check: ['annual', 'quarterly'],
   },
   {
-    service: 'Desconto de 20% em aluguer de bicicletas',
+    service: 'membershipTable.step07',
     check: ['annual', 'quarterly', 'monthly'],
   },
 ]

@@ -8,7 +8,7 @@
         py-0
       "
     >
-      #activities
+      #{{ $t('general.activities') }}
     </h3>
     <h1 class="blue-grey--text text--darken-3 py-0">get in action</h1>
 
@@ -46,7 +46,9 @@ export default {
   },
   computed: {
     activities() {
-      return Object.keys(prices).filter((e) => prices[e].title !== 'massage')
+      return Object.keys(prices).filter(
+        (e) => prices[e].title !== 'products.massage.title'
+      )
     },
   },
 }

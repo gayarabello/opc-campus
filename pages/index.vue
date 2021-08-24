@@ -11,16 +11,15 @@
     </v-container>
     <v-container class="mid-cont my-12">
       <v-row align="center">
-        <v-col cols="6">
+        <v-col cols="12" sm="6">
           <h4>Oporto Collection Campus</h4>
-          <h2>a place to reboot</h2>
+          <h2>{{ $t('section1.title') }}</h2>
           <p>
-            Our set of activities is designed to make you rest, exercise and
-            celebrate life.
+            {{ $t('section1.subtitle') }}
           </p>
-          <v-btn outlined>join the club</v-btn>
+          <v-btn outlined>{{ $t('joinTheClub') }}</v-btn>
         </v-col>
-        <v-col cols="6">
+        <v-col cols="12" sm="6">
           <v-img
             height="400"
             src="https://images.unsplash.com/photo-1534366381226-672074533fd3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2697&q=80"
