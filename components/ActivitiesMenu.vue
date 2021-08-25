@@ -17,7 +17,7 @@
         style="cursor: pointer"
         v-for="activity in activities"
         :key="activity.title"
-        @click="navigateSection(activity)"
+        @click="$emit('navigate-section-event', activity)"
       >
         <v-img height="170" width="170" :src="prices[activity].hero"></v-img>
         <h3 class="text-capitalize font-weight-regular py-2">
@@ -35,15 +35,7 @@ export default {
       prices,
     }
   },
-  methods: {
-    navigateSection(section) {
-      this.$nextTick(() =>
-        window.document
-          .getElementById(section)
-          .scrollIntoView({ block: 'start', behavior: 'smooth' })
-      )
-    },
-  },
+  methods: {},
   computed: {
     activities() {
       return Object.keys(prices).filter(

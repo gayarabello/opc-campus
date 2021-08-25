@@ -19,7 +19,6 @@
     <div class="my-6 mid-cont mx-auto">
       <v-row no-gutters class="py-0 px-3">
         <v-col cols="6"> </v-col>
-        <!-- :class="{ shadow: index % 2 !== 0 }" -->
         <v-col
           class="py-1 text-center"
           cols="2"
@@ -96,6 +95,11 @@
           </h3>
         </v-col>
       </v-row>
+      <div class="text-center mt-6">
+        <v-btn depressed color="primary" @click="$emit('show-form')">{{
+          $t('joinTheClub')
+        }}</v-btn>
+      </div>
     </div>
   </div>
 </template>

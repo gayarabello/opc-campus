@@ -1,5 +1,5 @@
 <template>
-  <div :id="activity.title" class="mt-12 py-6">
+  <div :id="$t(activity.title)" class="mt-12 py-6">
     <v-row no-gutters align="center">
       <v-col
         :style="
@@ -73,20 +73,42 @@
         </v-row>
         <v-divider v-if="index !== activity.prices[key].length - 1"></v-divider>
       </div>
+      <div class="text-center">
+        <v-btn
+          outlined
+          color="primary"
+          @click="$emit('show-form', { activity, key })"
+          >{{ 'schedule' }}</v-btn
+        >
+      </div>
     </div>
   </div>
 </template>
 <script lang="ts">
 import Vue from 'vue'
 export default Vue.extend({
-  created() {},
-  mounted() {},
+  components: {},
+  data() {
+    return {
+      formDialog: false,
+    }
+  },
+
   props: {
     activity: {
       type: Object,
     },
     forKey: {
       type: String,
+    },
+  },
+  methods: {
+    confirmClose() {
+      console.log('close')
+    },
+    showForm(unity: string) {
+      this.formDialog = true
+      console.log(unity)
     },
   },
 })

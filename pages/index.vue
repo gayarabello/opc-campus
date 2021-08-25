@@ -17,7 +17,9 @@
           <p>
             {{ $t('section1.subtitle') }}
           </p>
-          <v-btn outlined>{{ $t('joinTheClub') }}</v-btn>
+          <v-btn @click="navigateSection('membership')" outlined>{{
+            $t('joinTheClub')
+          }}</v-btn>
         </v-col>
         <v-col cols="12" sm="6">
           <v-img
@@ -27,26 +29,62 @@
         </v-col>
       </v-row>
     </v-container>
-    <ActivitiesMenu />
-    <MembershipTable />
+
+    <ActivitiesMenu @navigate-section-event="navigateSectionEvent" />
+
+    <MembershipTable id="membership" @show-form="showForm" />
+
     <PriceTables
-      :activity="activity"
+      @show-form="showForm"
       :forKey="key"
+      :activity="activity"
       v-for="(activity, key) in services"
       :key="key"
     />
+
+    <FormDialog
+      :clickedActivity="activity"
+      :showActivityDialog="showActivityDialog"
+      :showMembershipDialog="showMembershipDialog"
+      @confirm-close="confirmClose()"
+    />
   </div>
 </template>
-<script lang="ts">
+<script>
 import { prices } from '../data/prices'
+const FormDialog = () => import('@/components/FormDialog.vue')
 const PriceTables = () => import('../components/PriceTables.vue')
 import Vue from 'vue'
 export default Vue.extend({
-  components: { PriceTables },
+  components: { PriceTables, FormDialog },
   data() {
     return {
+      showActivityDialog: false,
+      showMembershipDialog: false,
       services: prices,
+      activity: {},
     }
+  },
+  methods: {
+    showForm(e) {
+      e ? (this.showActivityDialog = true) : (this.showMembershipDialog = true)
+
+      this.activity = e
+    },
+    confirmClose() {
+      this.showActivityDialog = false
+    },
+    navigateSectionEvent(section) {
+      this.navigateSection(section)
+    },
+    navigateSection(section) {
+      console.log('navigateSection', section)
+      this.$nextTick(() =>
+        window.document
+          .getElementById(section)
+          .scrollIntoView({ block: 'end', behavior: 'smooth' })
+      )
+    },
   },
 })
 </script>

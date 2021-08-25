@@ -253,8 +253,8 @@ export const prices = {
                     duration: 60,
                     description: "massages.modeling",
                     price: {
-                        member: 50,
-                        nonMember: 65,
+                        member: 60,
+                        nonMember: 75,
                     }
                 },
                 {
@@ -262,8 +262,8 @@ export const prices = {
                     duration: 60,
                     description: "massages.sports",
                     price: {
-                        member: 50,
-                        nonMember: 65,
+                        member: 60,
+                        nonMember: 75,
                     }
                 },
             ]
