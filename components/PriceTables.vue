@@ -49,7 +49,7 @@
         "
         v-if="Object.keys(activity.prices).length > 1"
       >
-        {{ key }}
+        {{ $t(`general.${key}`) }}
       </h3>
 
       <div v-for="(item, index) in activity.prices[key]" :key="index">

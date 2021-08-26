@@ -6,6 +6,10 @@
       @click:outside="$emit('confirm-close')"
     >
       <v-card>
+        <div v-if="loading" class="text-center py-12">
+          <v-progress-circular indeterminate size="64" />
+          <h3 class="mt-5">Submitting...</h3>
+        </div>
         <v-card-title class="flex-center flex-column">
           <h3 class="mx-auto font-weight-regular blue-grey--text lighten-1">
             Become a member
@@ -14,7 +18,7 @@
             Fill the form and we will get back to you shortly
           </h5>
         </v-card-title>
-        <v-card-text>
+        <v-card-text v-if="showMembershipDialog && !loading">
           <v-form class="px-12 text-center" @submit.prevent="sendForm">
             <v-row no-gutters class="justify-center">
               <v-col cols="12">
@@ -57,8 +61,8 @@
                 <v-select
                   outlined
                   label="Plan"
-                  item-text="name"
-                  item-value="name"
+                  :item-value="(e) => $t(e.name)"
+                  :item-text="(e) => `${$t(e.name)} - Price: ${e.price}€`"
                   name="select"
                   :items="plans"
                   v-model="selectedPlan"
@@ -81,83 +85,126 @@
 
     <v-dialog
       max-width="600"
+      v-if="clickedActivity"
       :value="showActivityDialog"
       @click:outside="$emit('confirm-close')"
     >
       <v-card>
-        <v-card-title class="flex-center flex-column">
-          <h3 class="mx-auto font-weight-regular blue-grey--text lighten-1">
-            Become a member
+        <v-row no-gutters justify="end">
+          <v-btn @click="$emit('confirm-close')" icon
+            ><v-icon>mdi-close</v-icon></v-btn
+          >
+        </v-row>
+        <v-card-title
+          v-if="clickedActivity.activity"
+          class="flex-center flex-column blue-grey--text pt-0"
+        >
+          <h3 v-if="step === 1" class="text-capitalize text-center my-3">
+            {{
+              $t(clickedActivity.activity.title) +
+              ' | ' +
+              $t(`general.${clickedActivity.key}`)
+            }}
+          </h3>
+
+          <div v-if="step === 2" class="text-center mx-auto mb-3">
+            <h4 class="text-capitalize">{{ selectedActivity }}</h4>
+            <h3>{{ `${form.date} | ${form.time}` }}</h3>
+            <h4 class="text-capitalize text-center">
+              {{
+                `${$t(clickedActivity.activity.title)}  |
+                      ${$t(`general.${clickedActivity.key}`)}`
+              }}
+            </h4>
+          </div>
+
+          <!--           <h3 class="mx-auto font-weight-regular blue-grey--text lighten-1">
+            Schedule your session
           </h3>
           <h5 class="mx-auto font-weight-regular blue-grey--text lighten-1">
-            Fill the form and we will get back to you shortly
-          </h5>
+            Fill the form and we will get back to you shortly with a
+            confirmation
+          </h5> -->
         </v-card-title>
-        <!--         <v-row no-gutters>
-          <v-col v-for="step in steps" :key="step.id">
-            {{ step.text }}
-          </v-col>
-        </v-row> -->
+
         <v-card-text>
-          <v-form class="px-6" @submit.prevent="sendForm">
+          <div v-if="loading" class="text-center py-12">
+            <v-progress-circular indeterminate size="64" />
+            <h3 class="mt-5">Submitting...</h3>
+          </div>
+          <v-form
+            v-if="clickedActivity && !loading"
+            class="px-6"
+            @submit.prevent="sendForm"
+          >
             <v-row v-if="clickedActivity.activity" no-gutters>
-              <template v-if="step === 1">
-                <v-col cols="12">
-                  <h3 class="text-capitalize text-center my-3">
-                    {{ $t(clickedActivity.activity.title) }} |
-                    {{ $t(`general.${clickedActivity.key}`) }}
-                  </h3>
-                </v-col>
+              <v-row no-gutters v-show="step === 1">
                 <v-col cols="12" class="text-center">
                   <v-select
+                    hide-details
+                    class="my-3"
+                    label="Choose session"
                     outlined
+                    name="activity"
                     :items="
                       clickedActivity['activity']['prices'][clickedActivity.key]
                     "
                     v-model="selectedActivity"
-                    item-value="name"
-                    :item-text="(e) => $t(e.name)"
+                    :item-value="(e) => $t(e.name)"
+                    :item-text="
+                      (e) =>
+                        `${$t(e.name)} - ${$tc('member')}: ${
+                          e.price.member
+                        }€ / ${$tc('nonMember')}:${e.price.nonMember}€`
+                    "
                   />
-                </v-col>
-                <v-col v-if="selectedActivity" cols="12" class="text-center">
-                  <v-date-picker
-                    v-model="form.date"
-                    :value="form.date"
-                    name="date"
-                    no-title
-                    label="Choose dates"
-                  ></v-date-picker>
-
-                  <v-text-field
+                  <v-select
                     outlined
+                    name="time"
                     label="Desired Time"
-                    value="12:30:00"
-                    type="time"
-                  ></v-text-field>
+                    v-model="form.time"
+                    :items="clickedActivity.activity.hours"
+                    append-icon="mdi-clock-outline"
+                  />
+                  <template v-if="selectedActivity" class="text-center">
+                    <v-date-picker
+                      v-model="form.date"
+                      name="date"
+                      no-title
+                      :min="today"
+                      label="Choose dates"
+                    ></v-date-picker>
+                  </template>
                 </v-col>
-              </template>
+              </v-row>
 
               <template v-if="step === 2">
                 <v-col cols="12">
                   <v-text-field
                     class="pb-4"
+                    required
                     hide-details
-                    aria-required
+                    :error-messages="nameErrors"
                     v-model="form.name"
                     outlined
                     type="text"
-                    name="fullname"
+                    name="name"
                     label="Full Name"
+                    @input="$v.form.name.$touch()"
+                    @blur="$v.form.name.$touch()"
                   ></v-text-field>
                   <v-text-field
                     class="pb-4"
+                    required
                     hide-details
-                    aria-required
+                    :error-messages="emailErrors"
                     v-model="form.email"
                     outlined
                     type="email"
                     name="email"
                     label="Email"
+                    @input="$v.form.email.$touch()"
+                    @blur="$v.form.email.$touch()"
                   ></v-text-field>
                   <v-text-field
                     class="pb-4"
@@ -166,25 +213,60 @@
                     v-model="form.phone"
                     outlined
                     name="phone"
-                    type="number"
+                    type="tel"
                     label="Phone"
                   ></v-text-field>
                 </v-col>
               </template>
-              <v-btn
-                v-if="step === 2"
-                :disabled="disableActivityButton"
-                class="text-center"
-                type="submit"
-                depressed
-                color="primary"
-              >
-                Submit</v-btn
-              >
-              <v-col v-else cols="12">
-                <v-btn @click="goNext()"> Next </v-btn>
+              <v-col v-if="step === 2" cols="12" class="text-center">
+                <v-btn
+                  class="text-center"
+                  @click="step -= 1"
+                  text
+                  color="primary"
+                >
+                  Back</v-btn
+                >
+                <v-btn
+                  :disabled="disableActivityButton"
+                  class="text-center"
+                  type="submit"
+                  depressed
+                  color="primary"
+                >
+                  Submit</v-btn
+                >
               </v-col>
-              <input class="d-none" type="text" :value="activity" />
+              <v-col v-else cols="12" class="text-center">
+                <v-btn
+                  color="primary"
+                  x-large
+                  :disabled="disableNextButton"
+                  rounded
+                  depressed
+                  @click="goNext()"
+                >
+                  Next
+                </v-btn>
+              </v-col>
+              <input
+                class="d-none"
+                name="date"
+                type="text"
+                :value="form.date"
+              />
+              <input
+                class="d-none"
+                name="activityTitle"
+                :value="$t(clickedActivity.activity.title)"
+                type="text"
+              />
+              <input
+                class="d-none"
+                name="activityKey"
+                :value="clickedActivity.key"
+                type="text"
+              />
             </v-row>
           </v-form>
         </v-card-text>
@@ -216,6 +298,7 @@ export default Vue.extend({
   },
   data() {
     return {
+      loading: false,
       selectedActivity: '',
       step: 1,
       steps: [
@@ -232,45 +315,63 @@ export default Vue.extend({
           text: '3- Submit you contacts',
         },
       ],
-      selectedPlan: 'Annual',
-      activity: '',
+      selectedPlan: '',
       menu2: '',
       time: null,
       plans: [
         {
-          name: 'Annual',
+          name: 'general.annual',
           price: 700,
         },
         {
-          name: '3 Months',
+          name: 'general.months3',
           price: 200,
         },
         {
-          name: 'Monthly',
+          name: 'general.monthly',
           price: 80,
         },
       ],
       form: {
         name: '',
         email: '',
-        phone: null,
+        phone: '',
         date: new Date(Date.now() - new Date().getTimezoneOffset() * 60000)
           .toISOString()
           .substr(0, 10),
         additional: '',
+        time: '12:30',
       },
       addMoreInfo: false,
     }
   },
   watch: {
+    showMembershipDialog() {
+      this.selectedPlan = this.$t(this.plans[0].name)
+    },
+
     showActivityDialog() {
       if (this.clickedActivity.activity) {
-        this.selectedActivity =
+        this.selectedActivity = this.$t(
           this.clickedActivity.activity.prices[this.clickedActivity.key][0].name
+        )
+        this.form.date = new Date(
+          Date.now() - new Date().getTimezoneOffset() * 60000
+        )
+          .toISOString()
+          .substr(0, 10)
       }
     },
   },
   computed: {
+    today() {
+      return new Date(Date.now() - new Date().getTimezoneOffset() * 60000)
+        .toISOString()
+        .substr(0, 10)
+    },
+    disableNextButton() {
+      return this.selectedActivity === '' || this.form.date === ''
+    },
     disableButton() {
       return (
         this.form.name.length === 0 ||
@@ -283,9 +384,7 @@ export default Vue.extend({
     disableActivityButton() {
       return (
         this.form.name.length === 0 ||
-        this.nameErrors.length > 0 ||
         this.form.email.length === 0 ||
-        this.emailErrors.length > 0 ||
         this.form.phone.length === 0
       )
     },
@@ -313,23 +412,37 @@ export default Vue.extend({
       this.step += 1
     },
     sendForm(e) {
+      this.loading = true
       this.$v.$touch()
+
+      this.submitForm(e)
+        .then((res) => {
+          this.$v.$reset()
+          console.log(res.status, res.text)
+          this.confirmSuccess()
+          this.loading = false
+        })
+        .catch((error) => {
+          console.log('FAILED', error)
+          this.$v.$reset()
+          this.loading = false
+          Swal.fire({
+            title: `We're sorry!`,
+            text: `We are working to fix it, please call +351 224 092 829`,
+            icon: 'error',
+            showCancelButton: false,
+          })
+        })
+    },
+
+    async submitForm(e) {
       let service = 'service_amnk2zc'
       let user = 'user_tldYcBb4z983aLs4NjWG7'
-      let template = 'template_v2agfoc'
-      try {
-        emailjs.sendForm(service, template, e.target, user, {
-          name: this.form.name,
-          email: this.form.email,
-          phone: this.form.phone,
-          select: this.selectedPlan,
-          activity: this.form.activity,
-          date: this.form.date,
-        })
-        this.confirmSuccess()
-      } catch (error) {
-        console.log({ error })
-      }
+      let template = this.clickedActivity
+        ? 'template_cbnmsd6'
+        : 'template_v2agfoc'
+
+      return await emailjs.sendForm(service, template, e.target, user)
     },
 
     confirmSuccess() {
@@ -346,10 +459,14 @@ export default Vue.extend({
     clearForm() {
       this.form.name = ''
       this.form.email = ''
-      this.form.phone = null
+      this.form.phone = ''
       this.form.selectedPlan = ''
-      this.form.activity = ''
+      this.selectedActivity = ''
       this.form.date = ''
+      this.step = 1
+      /* this.$v.form.name.$dirty = false
+      this.$v.form.email.$dirty = false
+      this.$v.form.phone.$dirty = false */
     },
   },
 })

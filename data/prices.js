@@ -1,3 +1,4 @@
+import { schedules } from "../data/functionHours"
 export const prices = {
 
     padel: {
@@ -5,6 +6,7 @@ export const prices = {
         title: "products.padel.title",
         hero: "https://images.unsplash.com/photo-1526888935184-a82d2a4b7e67?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80",
         subtitle: "products.padel.subtitle",
+        hours: schedules.default,
         prices: {
             classes: [
                 {
@@ -82,6 +84,7 @@ export const prices = {
         title: "products.pilates.title",
         subtitle: "products.pilates.subtitle",
         hero: "https://images.unsplash.com/photo-1604467731651-3d8b9c702b86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=668&q=80",
+        hours: schedules.default,
         prices: {
             classes: [
                 {
@@ -118,6 +121,7 @@ export const prices = {
         title: "products.fitness.title",
         subtitle: "products.fitness.subtitle",
         hero: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+        hours: schedules.default,
         prices: {
             classes: [
                 {
@@ -163,8 +167,9 @@ export const prices = {
         title: "products.yoga.title",
         subtitle: "products.yoga.subtitle",
         hero: "https://images.unsplash.com/photo-1611094601537-cdbb75b979cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80",
+        hours: schedules.default,
         prices: {
-            'group classes': [
+            groupClasses: [
                 {
                     name: "general.singleSession",
                     solo: false,
@@ -193,7 +198,7 @@ export const prices = {
 
 
             ],
-            'solo classes': [
+            soloClasses: [
                 {
                     name: "general.singleSession",
                     solo: true,
@@ -228,6 +233,7 @@ export const prices = {
         title: "products.massage.title",
         subtitle: "products.massage.subtitle",
         hero: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80",
+        hours: schedules.default,
         prices: {
             treatments: [
                 {

@@ -3,7 +3,7 @@ export default {
     general: {
         annual: "Annual",
         months3: "3 months",
-        monthly: "monthly",
+        monthly: "Monthly",
         activities: "Activities",
         wellness: "Wellness",
         membership: "Membership",
@@ -28,7 +28,8 @@ export default {
         relaxing: "relaxing",
         aromatic: "aromatic",
         modeling: "modeling",
-        sports: "sports"
+        sports: "sports",
+        treatments: "treatments"
     },
 
     massages: {

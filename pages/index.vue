@@ -73,6 +73,7 @@ export default Vue.extend({
     },
     confirmClose() {
       this.showActivityDialog = false
+      this.showMembershipDialog = false
     },
     navigateSectionEvent(section) {
       this.navigateSection(section)

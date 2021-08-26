@@ -27,7 +27,8 @@ export default {
         relaxing: "relaxante",
         aromatic: "aromática",
         modeling: "modeladora",
-        sports: "desportos"
+        sports: "desportos",
+        treatments: "tratamentos"
     },
 
     massages: {
