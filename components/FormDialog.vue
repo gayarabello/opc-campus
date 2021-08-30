@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-dialog
-      max-width="500"
+      max-width="320"
       :value="showMembershipDialog"
       @click:outside="$emit('confirm-close')"
     >
@@ -84,7 +84,7 @@
     </v-dialog>
 
     <v-dialog
-      max-width="600"
+      max-width="320"
       v-if="clickedActivity"
       :value="showActivityDialog"
       @click:outside="$emit('confirm-close')"
@@ -127,19 +127,20 @@
           </h5> -->
         </v-card-title>
 
-        <v-card-text>
+        <v-card-text class="px-2">
           <div v-if="loading" class="text-center py-12">
             <v-progress-circular indeterminate size="64" />
             <h3 class="mt-5">Submitting...</h3>
           </div>
           <v-form
+            
             v-if="clickedActivity && !loading"
-            class="px-6"
+            class="px-3"
             @submit.prevent="sendForm"
           >
-            <v-row v-if="clickedActivity.activity" no-gutters>
-              <v-row no-gutters v-show="step === 1">
-                <v-col cols="12" class="text-center">
+            <div v-if="clickedActivity.activity" no-gutters>
+              <div v-show="step === 1" class="text-center">
+                
                   <v-select
                     hide-details
                     class="my-3"
@@ -166,8 +167,9 @@
                     :items="clickedActivity.activity.hours"
                     append-icon="mdi-clock-outline"
                   />
-                  <template v-if="selectedActivity" class="text-center">
+                  <template v-if="selectedActivity">
                     <v-date-picker
+                    width="278"
                       v-model="form.date"
                       name="date"
                       no-title
@@ -175,8 +177,8 @@
                       label="Choose dates"
                     ></v-date-picker>
                   </template>
-                </v-col>
-              </v-row>
+                
+              </div>
 
               <template v-if="step === 2">
                 <v-col cols="12">
@@ -267,7 +269,7 @@
                 :value="clickedActivity.key"
                 type="text"
               />
-            </v-row>
+            </div>
           </v-form>
         </v-card-text>
       </v-card>

@@ -6,6 +6,7 @@ export default {
         monthly: "mensal",
         activities: "Atividades",
         membership: "Filiação",
+        wellness: "wellness",
         day: "dia | dias",
         classes: "aulas",
         rent: "aluguer",

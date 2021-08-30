@@ -4,7 +4,8 @@ export const prices = {
     padel: {
         hash: "general.activities",
         title: "products.padel.title",
-        hero: "https://images.unsplash.com/photo-1526888935184-a82d2a4b7e67?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80",
+        hero: "https://res.cloudinary.com/oporto-/image/upload/v1630319426/campus/padel_p8iine.jpg",
+        //hero: "https://images.unsplash.com/photo-1526888935184-a82d2a4b7e67?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80",
         subtitle: "products.padel.subtitle",
         hours: schedules.default,
         prices: {
@@ -83,8 +84,7 @@ export const prices = {
         hash: "general.activities",
         title: "products.pilates.title",
         subtitle: "products.pilates.subtitle",
-        hero: "https://image.shutterstock.com/image-photo/brunette-female-instructor-cute-two-600w-1172975581.jpg",
-        //hero: "https://images.unsplash.com/photo-1604467731651-3d8b9c702b86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=668&q=80",
+        hero: "https://res.cloudinary.com/oporto-/image/upload/v1630319426/campus/pilates_mafpjs.jpg",        
         hours: schedules.default,
         prices: {
             classes: [

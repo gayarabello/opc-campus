@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-navigation-drawer
+<!--     <v-navigation-drawer
       v-if="$vuetify.breakpoint.xsOnly"
       v-model="drawer"
       :mini-variant="miniVariant"
@@ -24,17 +24,18 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
-    </v-navigation-drawer>
+    </v-navigation-drawer> -->
     <v-app-bar :clipped-left="clipped" fixed flat app>
       <v-container class="py-0">
         <v-row align="center" no-gutters justify="space-between">
-          <v-app-bar-nav-icon
+<!--           <v-app-bar-nav-icon
             v-if="$vuetify.breakpoint.xsOnly"
             @click.stop="drawer = !drawer"
-          />
+          /> -->
           <img
             height="40"
             width="auto"
+            @click="$router.push('/')"
             :src="require('@/assets/images/logo.svg')"
             alt=""
           />

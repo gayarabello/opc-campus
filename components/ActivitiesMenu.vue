@@ -35,7 +35,9 @@ export default {
       prices,
     }
   },
-  methods: {},
+  mounted() {
+    console.log(this.activities)
+  },
   computed: {
     activities() {
       return Object.keys(prices).filter(
