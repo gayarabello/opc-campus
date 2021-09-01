@@ -26,20 +26,21 @@
       </v-list>
     </v-navigation-drawer> -->
     <v-app-bar :clipped-left="clipped" fixed flat app>
-      <v-container class="py-0">
+      <v-container class="py-0 px-0">
         <v-row align="center" no-gutters justify="space-between">
 <!--           <v-app-bar-nav-icon
             v-if="$vuetify.breakpoint.xsOnly"
             @click.stop="drawer = !drawer"
           /> -->
           <img
-            height="40"
+            :height="$vuetify.breakpoint.smAndUp ? 40 : 36"
             width="auto"
+            :src="$vuetify.breakpoint.smAndUp ? require('@/assets/images/logo.svg') : require('@/assets/images/logo_vertical.svg') "
+            alt="logo"
             @click="$router.push('/')"
-            :src="require('@/assets/images/logo.svg')"
-            alt=""
           />
           <v-select
+            v-model="language"
             dense
             hide-details
             class="my-0 py-0"
@@ -50,7 +51,6 @@
             :items="$i18n.locales"
             item-text="name"
             item-value="code"
-            v-model="language"
             @change="$router.push(switchLocalePath(language))"
           ></v-select>
         </v-row>

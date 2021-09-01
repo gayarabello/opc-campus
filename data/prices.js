@@ -4,8 +4,7 @@ export const prices = {
     padel: {
         hash: "general.activities",
         title: "products.padel.title",
-        hero: "https://res.cloudinary.com/oporto-/image/upload/v1630319426/campus/padel_p8iine.jpg",
-        //hero: "https://images.unsplash.com/photo-1526888935184-a82d2a4b7e67?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80",
+        hero: "https://res.cloudinary.com/oporto-/image/upload/v1630319426/campus/padel_p8iine.jpg",        
         subtitle: "products.padel.subtitle",
         hours: schedules.default,
         prices: {
@@ -20,22 +19,22 @@ export const prices = {
                 {
                     name: "general.paxSession2",
                     price: {
-                        member: 20,
-                        nonMember: 30
+                        member: 30,
+                        nonMember: 40
                     }
                 },
                 {
                     name: "general.paxSession3",
                     price: {
-                        member: 15,
-                        nonMember: 25
+                        member: 25,
+                        nonMember: 35
                     }
                 },
                 {
                     name: "general.paxSession4",
                     price: {
-                        member: 10,
-                        nonMember: 20
+                        member: 20,
+                        nonMember: 30
                     }
                 },
             ],
@@ -64,8 +63,8 @@ export const prices = {
                 {
                     name: "general.courtFullDay",
                     price: {
-                        member: 105,
-                        nonMember: 125
+                        member: 110,
+                        nonMember: 130
                     }
                 },
 
@@ -92,7 +91,7 @@ export const prices = {
                     name: "general.singleSession",
                     solo: true,
                     price: {
-                        member: 50,
+                        member: 55,
                         nonMember: 65
                     }
                 },
@@ -101,8 +100,8 @@ export const prices = {
                     name: "general.sessionCourse4",
                     solo: true,
                     price: {
-                        member: 45,
-                        nonMember: 60
+                        member: 200,
+                        nonMember: 240
                     }
                 },
 
@@ -110,8 +109,8 @@ export const prices = {
                     name: "general.sessionCourse8",
                     solo: true,
                     price: {
-                        member: 40,
-                        nonMember: 55
+                        member: 360,
+                        nonMember: 440
                     }
                 },
             ],
@@ -176,15 +175,15 @@ export const prices = {
                     solo: false,
                     price: {
                         member: 20,
-                        nonMember: 25
+                        nonMember: 30
                     }
                 },
                 {
                     name: "general.sessionCourse4",
                     solo: false,
                     price: {
-                        member: 60,
-                        nonMember: 80
+                        member: 65,
+                        nonMember: 90
                     }
                 },
 
@@ -192,8 +191,8 @@ export const prices = {
                     name: "general.sessionCourse8",
                     solo: false,
                     price: {
-                        member: 100,
-                        nonMember: 130
+                        member: 120,
+                        nonMember: 170
                     }
                 },
 
@@ -204,24 +203,24 @@ export const prices = {
                     name: "general.singleSession",
                     solo: true,
                     price: {
-                        member: 45,
-                        nonMember: 60
+                        member: 50,
+                        nonMember: 65
                     }
                 },
                 {
                     name: "general.sessionCourse4",
                     solo: true,
                     price: {
-                        member: 115,
-                        nonMember: 155
+                        member: 180,
+                        nonMember: 220
                     }
                 },
                 {
                     name: "general.sessionCourse8",
                     solo: true,
                     price: {
-                        member: 195,
-                        nonMember: 245
+                        member: 320,
+                        nonMember: 380
                     }
                 },
 
