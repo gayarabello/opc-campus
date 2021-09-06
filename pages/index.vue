@@ -5,7 +5,7 @@
         src="https://images.unsplash.com/photo-1562778612-e1e0cda9915c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3034&q=80"
       >
         <h1 class="text-center">
-          Live the <span class="font-weight-bold">good</span> life
+          <span class="font-weight-bold">enjoy</span> life
         </h1>
       </v-parallax>
     </v-container>
@@ -83,7 +83,7 @@ export default Vue.extend({
       this.$nextTick(() =>
         window.document
           .getElementById(section)
-          .scrollIntoView({ block: 'end', behavior: 'smooth' })
+          .scrollIntoView({ block: 'nearest', behavior: 'smooth' })
       )
     },
   },

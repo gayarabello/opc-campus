@@ -4,7 +4,7 @@ export const prices = {
     padel: {
         hash: "general.activities",
         title: "products.padel.title",
-        hero: "https://res.cloudinary.com/oporto-/image/upload/v1630319426/campus/padel_p8iine.jpg",        
+        hero: "https://res.cloudinary.com/oporto-/image/upload/v1630319426/campus/padel_p8iine.jpg",
         subtitle: "products.padel.subtitle",
         hours: schedules.default,
         prices: {
@@ -83,7 +83,7 @@ export const prices = {
         hash: "general.activities",
         title: "products.pilates.title",
         subtitle: "products.pilates.subtitle",
-        hero: "https://res.cloudinary.com/oporto-/image/upload/v1630319426/campus/pilates_mafpjs.jpg",        
+        hero: "https://res.cloudinary.com/oporto-/image/upload/v1630319426/campus/pilates_mafpjs.jpg",
         hours: schedules.default,
         prices: {
             classes: [
@@ -264,7 +264,7 @@ export const prices = {
                     }
                 },
                 {
-                    name: 'general.sports',
+                    name: 'general.sporty',
                     duration: 60,
                     description: "massages.sports",
                     price: {

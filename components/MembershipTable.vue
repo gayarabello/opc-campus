@@ -38,17 +38,14 @@
           ]"
           :key="index"
         >
-          <h3
-            class="blue--text font-weight-regular"
-            style="
-              line-height: 110%;
-              font-family: 'Roboto Condensed', sans-serif;
-              font-size: 1.75rem;
-            "
-          >
+          <h3 class="blue--text font-weight-regular condensed prices">
             €{{ price.price }}
           </h3>
-          <h5 class="blue--text text-uppercase">{{ $t(price.name) }}</h5>
+          <h6
+            class="blue--text font-weight-sm-regular condensed text-uppercase"
+          >
+            {{ $t(price.name) }}
+          </h6>
         </v-col>
       </v-row>
       <v-row
@@ -80,17 +77,10 @@
         <v-col
           class="py-3 text-center"
           cols="2"
-          v-for="(price, index) in ['+ €200', '+ €65', '+ €15']"
+          v-for="(price, index) in ['+€200', '+€65', '+€15']"
           :key="index"
         >
-          <h3
-            style="
-              line-height: 110%;
-              font-family: 'Roboto Condensed', sans-serif;
-              font-size: 1.5rem;
-            "
-            class="blue--text font-weight-regular"
-          >
+          <h3 class="blue--text font-weight-regular prices condensed">
             {{ price }}
           </h3>
         </v-col>
@@ -149,8 +139,22 @@ export default {
   box-shadow: 0px -8px 4px #ffffff, 0px 8px 4px #ffffff,
     -4px 0px 8px rgba(188, 207, 225, 0.6), 4px 0px 8px rgba(188, 207, 225, 0.6);
 }
-/* .shadow {
-  box-shadow: -8px 0px 8px -8px rgba(188, 207, 225, 1),
-    8px 0px 8px -8px rgba(188, 207, 225, 1);
-} */
+
+.condensed {
+  line-height: 110%;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.prices {
+  font-size: 1.25rem;
+  @media screen and (min-width: 600px) {
+    font-size: 1.75rem;
+  }
+}
+h6 {
+  font-size: 9.8px;
+  @media screen and (min-width: 600px) {
+    font-size: 1rem !important;
+  }
+}
 </style>

@@ -6,7 +6,7 @@ export default {
         monthly: "mensal",
         activities: "Atividades",
         membership: "Filiação",
-        wellness: "wellness",
+        wellness: "Wellness",
         day: "dia | dias",
         classes: "aulas",
         rent: "aluguer",
@@ -29,7 +29,13 @@ export default {
         aromatic: "aromática",
         modeling: "modeladora",
         sports: "desportos",
-        treatments: "tratamentos"
+        sporty: "desportiva",
+        treatments: "tratamentos",
+        schedule: "solicitar agendamento",
+        padel: "padel",
+        fitness: "fitness",
+        pilates: "pilates",
+        yoga: "ioga",
     },
 
     massages: {

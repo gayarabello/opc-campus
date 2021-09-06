@@ -17,7 +17,7 @@
         style="cursor: pointer"
         v-for="activity in activities"
         :key="activity.title"
-        @click="$emit('navigate-section-event', activity)"
+        @click="$emit('navigate-section-event', $t(`general.${activity}`))"
       >
         <v-img height="170" width="170" :src="prices[activity].hero"></v-img>
         <h3 class="text-capitalize font-weight-regular py-2">

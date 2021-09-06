@@ -29,7 +29,13 @@ export default {
         aromatic: "aromatic",
         modeling: "modeling",
         sports: "sports",
-        treatments: "treatments"
+        sporty: "sporty",
+        treatments: "treatments",
+        schedule: "request schedule",
+        padel: "padel",
+        fitness: "fitness",
+        pilates: "pilates",
+        yoga: "yoga",
     },
 
     massages: {

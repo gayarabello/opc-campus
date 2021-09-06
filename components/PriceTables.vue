@@ -1,6 +1,6 @@
 <template>
   <div :id="$t(activity.title)" class="mt-12 py-6">
-    <v-row no-gutters align="center" >
+    <v-row no-gutters align="center">
       <v-col
         :style="
           $vuetify.breakpoint.smAndUp
@@ -8,16 +8,17 @@
             : 'min-height: 220px'
         "
         class="blue-grey lighten-5 text-left align-center d-flex"
-        cols="7"
-        md="6"
+        cols="12"
+        sm="7"
       >
-        <v-row no-gutters >
+        <v-row no-gutters>
           <v-col
             v-if="$vuetify.breakpoint.smAndUp"
-            cols="1"            
-            md="6"
+            cols="2"
+            md="5"
+            lg="6"
           ></v-col>
-          <v-col cols="11" md="6" class="px-6 px-sm-0">
+          <v-col cols="10" md="7" lg="6" class="px-6 px-sm-0">
             <h4 class="blue-grey--text">#{{ $t(activity.hash) }}</h4>
             <h2 class="blue-grey--text text--darken-4 py-2">
               {{ $t(activity.title) }}
@@ -28,7 +29,7 @@
           </v-col>
         </v-row>
       </v-col>
-      <v-col class="purple" v-if="$vuetify.breakpoint.smAndUp" cols="5" md="6">
+      <v-col v-if="$vuetify.breakpoint.smAndUp" sm="5">
         <v-img height="320" :src="activity.hero"></v-img>
       </v-col>
     </v-row>
@@ -77,7 +78,7 @@
           outlined
           color="primary"
           @click="$emit('show-form', { activity, key })"
-          >{{ 'schedule' }}</v-btn
+          >{{ $t('general.schedule') }}</v-btn
         >
       </div>
     </div>
