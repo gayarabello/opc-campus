@@ -36,6 +36,7 @@ export default {
         fitness: "fitness",
         pilates: "pilates",
         yoga: "ioga",
+        lightAditional: "Com iluminação",
     },
 
     massages: {

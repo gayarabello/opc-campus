@@ -42,15 +42,15 @@ export const prices = {
                 {
                     name: "general.court60min",
                     price: {
-                        member: 20,
-                        nonMember: 30
+                        member: 15,
+                        nonMember: 25
                     }
                 },
                 {
                     name: "general.court90min",
                     price: {
-                        member: 30,
-                        nonMember: 45
+                        member: 25,
+                        nonMember: 35
                     }
                 },
                 {
@@ -73,6 +73,13 @@ export const prices = {
                     price: {
                         member: "Free",
                         nonMember: 7.5
+                    }
+                },
+                {
+                    name: "general.lightAditional",
+                    price: {
+                        member: `+€5`,
+                        nonMember: `+€5`
                     }
                 },
             ]
@@ -110,7 +117,7 @@ export const prices = {
                     solo: true,
                     price: {
                         member: 360,
-                        nonMember: 440
+                        nonMember: 420
                     }
                 },
             ],
@@ -147,7 +154,7 @@ export const prices = {
                     solo: true,
                     price: {
                         member: 360,
-                        nonMember: 440
+                        nonMember: 420
                     }
                 },
                 {
@@ -182,7 +189,7 @@ export const prices = {
                     name: "general.sessionCourse4",
                     solo: false,
                     price: {
-                        member: 65,
+                        member: 70,
                         nonMember: 90
                     }
                 },
@@ -192,7 +199,7 @@ export const prices = {
                     solo: false,
                     price: {
                         member: 120,
-                        nonMember: 170
+                        nonMember: 160
                     }
                 },
 
@@ -238,7 +245,7 @@ export const prices = {
             treatments: [
                 {
                     name: 'general.relaxing',
-                    duration: 60,
+                    duration: 50,
                     description: "massages.relaxing",
                     price: {
                         member: 50,
@@ -247,7 +254,7 @@ export const prices = {
                 },
                 {
                     name: 'general.aromatic',
-                    duration: 60,
+                    duration: 50,
                     description: "massages.aromatic",
                     price: {
                         member: 50,
@@ -256,7 +263,7 @@ export const prices = {
                 },
                 {
                     name: 'general.modeling',
-                    duration: 60,
+                    duration: 50,
                     description: "massages.modeling",
                     price: {
                         member: 60,
@@ -265,7 +272,7 @@ export const prices = {
                 },
                 {
                     name: 'general.sporty',
-                    duration: 60,
+                    duration: 50,
                     description: "massages.sports",
                     price: {
                         member: 60,
