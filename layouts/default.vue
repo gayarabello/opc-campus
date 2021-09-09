@@ -1,6 +1,6 @@
 <template>
   <v-app>
-<!--     <v-navigation-drawer
+    <!--     <v-navigation-drawer
       v-if="$vuetify.breakpoint.xsOnly"
       v-model="drawer"
       :mini-variant="miniVariant"
@@ -28,14 +28,18 @@
     <v-app-bar :clipped-left="clipped" fixed flat app>
       <v-container class="py-0 px-0">
         <v-row align="center" no-gutters justify="space-between">
-<!--           <v-app-bar-nav-icon
+          <!--           <v-app-bar-nav-icon
             v-if="$vuetify.breakpoint.xsOnly"
             @click.stop="drawer = !drawer"
           /> -->
           <img
             :height="$vuetify.breakpoint.smAndUp ? 40 : 36"
             width="auto"
-            :src="$vuetify.breakpoint.smAndUp ? require('@/assets/images/logo.svg') : require('@/assets/images/logo_vertical.svg') "
+            :src="
+              $vuetify.breakpoint.smAndUp
+                ? require('@/assets/images/logo.svg')
+                : require('@/assets/images/logo_vertical.svg')
+            "
             alt="logo"
             @click="$router.push('/')"
           />
@@ -92,5 +96,5 @@ export default {
 }
 </script>
 <style lang="scss">
-@import url('~/assets/components.scss');
+@import url('~/assets/css/components.scss');
 </style>

@@ -6,25 +6,24 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - opc-campus',
-    title: 'opc-campus',
+    titleTemplate: "Oporto Collection",
+    title: "Campus - Oporto Collection",
     htmlAttrs: {
-      lang: 'en'
+      lang: "en",
     },
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { hid: "description", name: "description", content: "Enjoy Life - Campus Oporto Collection - A place to reboot" },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+      { rel: "icon", type: "image/jpeg", href: "/favicon.jpg" },
+      { rel: "apple-touch-icon", type: "image/png", href: "/apple-touch.icon.png" }
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-  ],
+  css: ['~/assets/css/components'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -70,7 +69,7 @@ export default {
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
+    customVariables: ['~/assets/css/variables.scss'],
     theme: {
       dark: false,
       themes: {

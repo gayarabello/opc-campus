@@ -56,6 +56,14 @@ const FormDialog = () => import('@/components/FormDialog.vue')
 const PriceTables = () => import('../components/PriceTables.vue')
 import Vue from 'vue'
 export default Vue.extend({
+  head: {
+    link: [
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap',
+      },
+    ],
+  },
   components: { PriceTables, FormDialog },
   data() {
     return {
@@ -92,6 +100,7 @@ export default Vue.extend({
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
 h1 {
   font-family: 'Roboto Condensed', sans-serif;
   text-transform: uppercase;
