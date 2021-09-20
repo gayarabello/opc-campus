@@ -89,7 +89,7 @@ export default {
     heroTitle: "Viva a boa vida",
     section1: {
         title: "Um lugar para recarregar as energias",
-        subtitle: "Nosso conjunto de atividades foi pensado para fazer você descansar, se exercitar e celebrar a vida."
+        subtitle: "O nosso conjunto de atividades foi pensado para descansar, exercitar e celebrar a vida."
     },
     getInAction: "GET IN ACTION"
 }
