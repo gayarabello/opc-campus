@@ -41,7 +41,7 @@ export default {
 
     massages: {
         relaxing: {
-            title: " Massagem de Relaxamento - 50min",
+            title: "Massagem de Relaxamento - 50min",
             description: "Massagem lenta e suave que promove o relaxamento de todo o corpo, trazendo paz interior e melhorando a qualidade do sono."
         },
         tissue: {

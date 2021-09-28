@@ -41,7 +41,7 @@ export default {
 
     massages: {
         relaxing: {
-            title: "elaxing Massage - 50min",
+            title: "Relaxing Massage - 50min",
             description: "Relax your body and mind with a soft and slow massage that will enhance your inner peace and quality of sleep.",
         },
         tissue: {
