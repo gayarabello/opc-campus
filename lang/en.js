@@ -40,10 +40,46 @@ export default {
     },
 
     massages: {
-        relaxing: "A deep massage with techniques that improve blood circulation, remove toxic substances, relieve stress and restore your psycho-emotional and energetic area.",
-        aromatic: "The perfect combination of the therapist’s touch and the holistic effect of the aromatherapy oils helps to relax, relieve stress, detoxify or recover energies.",
-        modeling: "The modeling massage is indicated for those who want to reduce their measurements and also improve the appearance of cellulite.The technique uses firm movements with greater pressure in the movements.",
-        sports: "Suitable for those suffering from muscle tension and pain. Sports massage helps you regain your muscles after training, as it relieves pain by removing lactic acid from the muscles."
+        relaxing: {
+            title: "elaxing Massage - 50min",
+            description: "Relax your body and mind with a soft and slow massage that will enhance your inner peace and quality of sleep.",
+        },
+        tissue: {
+            title: "Deep tissue massage - 50min",
+            description: "Deep tissue pressure massage is beneficial in relieving chronic muscle tension and joint pain as well as other physical disorders.",
+        },
+        retreat: {
+            title: "Full Retreat Massage - 90min",
+            description: "This is a very complete and special treatment that uses Aromatherapy and a mix of techniques such as Abhyanga, Tui Na, Shiatsu and Acupressure to heal your body, mind and spirit releasing you from all the blockages, pain and stress you may have accumulated.",
+        },
+        lymph: {
+            title: "Lymphatic Drainage - 50min",
+            description: "Lymphatic drainage massage is a gentle type of massage that encourages the right movement of lymph fluids around the body, helping to relieve swelling, remove toxins and improve circulatory conditions",
+        },
+        neck: {
+            title: "Neck Pain Relief - 30min",
+            description: "Therapeutic massage with use of acupressure and Tui Na techniques to relief upper back shoulders and neck pain.",
+        },
+        legs: {
+            title: "Tired Legs Relief - 30min",
+            description: "Leg and foot massage with use of drainage techniques to relieve the sensation of tired limbs and improve blood circulation.",
+        },
+        foot: {
+            title: "Foot Massage - 30min",
+            description: "Enter in a deep state of relaxation and treat physical disorders through Reflexology.",
+        },
+        head: {
+            title: "Head Stress Relief - 15min",
+            description: "Quick head and facial massage with aromatherapy oils that will help to treat conditions such as headaches, migraines, mental stress, anxiety, sinusitis and others.",
+        },
+        chinese1: {
+            title: "Traditional Chinese Medicine - 1st session - 90min",
+            description: "Holistic and Ancestral Therapy that includes Acupunture, Moxibustion, Auriculostrerapy, Cupping therapy, Phytotherapy, Nutrition, Electroacupunture and Reflexology.",
+        },
+        chinese2: {
+            title: "Traditional Chinese Medicine - Following sessions - 60min",
+            description: "Holistic and Ancestral Therapy that includes Acupunture, Moxibustion, Auriculostrerapy, Cupping therapy, Phytotherapy, Nutrition, Electroacupunture and Reflexology.",
+        },
     },
 
     products: {

@@ -40,10 +40,46 @@ export default {
     },
 
     massages: {
-        relaxing: "Uma massagem profunda com várias técnicas que promove a melhoria da circulação sanguínea, remove substâncias tóxicas, alivia o stress e restabelece a sua área psico-emocional e energética.",
-        aromatic: "A combinação entre o toque da terapeuta e o efeito holístico dos óleos de aromaterapia ajudam a relaxar, aliviar o stress, desintoxicar ou recuperar energias.",
-        modeling: "Indicada para quem pretende reduzir as medidas e, também, melhorar o aspeto da celulite.A técnica utiliza movimentos firmes, rápidos e com maior pressão nas manobras.",
-        sports: "Indicado para aqueles que sofrem de tensão muscular e dor. A massagem desportiva ajuda a recuperar os músculos após o treino, já que alivia a dor ao retirar o ácido láctico dos músculos."
+        relaxing: {
+            title: " Massagem de Relaxamento - 50min",
+            description: "Massagem lenta e suave que promove o relaxamento de todo o corpo, trazendo paz interior e melhorando a qualidade do sono."
+        },
+        tissue: {
+            title: "Massagem Terapêutica - 50min",
+            description: "Massagem profunda e terapêutica indicada para tratar dores músculo-esqueléticas e problemas articulares, aliviando contraturas musculares bem como outros desequilíbrios fisiológicos."
+        },
+        retreat: {
+            title: "Retiro Corpo e Mente - 90min",
+            description: "Este é um tratamento muito completo e especial em que a aromaterapia se conjuga com uma mistura de técnicas terapêuticas como a Abhyanga, o Tui Na, o Shiatsu e a acupressão para o levar numa viagem de cura do corpo, mente e espírito, libertando-o de bloqueios, dores e stress acumulado."
+        },
+        lymph: {
+            title: "Drenagem linfática - 50min",
+            description: "A drenagem linfática manual é uma massagem suave e superficial que tem o objectivo de conduzir a linfa até aos gânglios linfáticos, ajudando assim a tratar a retenção de líquidos e o edema, bem como a remover toxinas e melhorar a circulação."
+        },
+        neck: {
+            title: "Costas, ombros e pescoço - 30min",
+            description: "Massagem terapêutica com uso de técnicas como acupressão, Shiatsu e Tui Na para aliviar dores locais nas costas, ombros e pescoço."
+        },
+        legs: {
+            title: "Pernas cansadas - 30min",
+            description: "Massagem de pernas e pés com utilização de técnicas de drenagem para aliviar a sensação de cansaço e melhorar a circulação sanguínea."
+        },
+        foot: {
+            title: "Massagem pés - 30min",
+            description: "Esta massagem aos pés permite entrar num estado de relaxamento profundo e ao mesmo tempo tratar patologias através da reflexologia."
+        },
+        head: {
+            title: "Massagem Craneal - 15min",
+            description: "Breve massagem craneal e facial com óleos de aromaterapia que ajuda a tratar sintomas como dores de cabeça, enxaquecas, stress mental, ansiedade, sinusite, entre outros."
+        },
+        chinese1: {
+            title: "Medicina Tradicional Chinesa - 1ª sessão - 90min",
+            description: "Terapia holística e ancestral que inclui Acupuntura,  Moxabustão, Auriculoterapia, Ventosaterapia, Fitoterapia, Nutrição, Electrocupuntura e Reflexologia."
+        },
+        chinese2: {
+            title: "Medicina Tradicional Chinesa - Acompanhamento - 60min",
+            description: "Terapia holística e ancestral que inclui Acupuntura,  Moxabustão, Auriculoterapia, Ventosaterapia, Fitoterapia, Nutrição, Electrocupuntura e Reflexologia."
+        },
     },
 
     products: {

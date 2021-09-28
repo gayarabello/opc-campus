@@ -244,39 +244,93 @@ export const prices = {
         prices: {
             treatments: [
                 {
-                    name: 'general.relaxing',
+                    name: 'massages.relaxing.title',
                     duration: 50,
-                    description: "massages.relaxing",
+                    description: "massages.relaxing.description",
                     price: {
-                        member: 50,
-                        nonMember: 65,
+                        member: 45,
+                        nonMember: 55,
                     }
                 },
                 {
-                    name: 'general.aromatic',
+                    name: 'massages.tissue.title',
                     duration: 50,
-                    description: "massages.aromatic",
-                    price: {
-                        member: 50,
-                        nonMember: 65,
-                    }
-                },
-                {
-                    name: 'general.modeling',
-                    duration: 50,
-                    description: "massages.modeling",
+                    description: "massages.tissue.description",
                     price: {
                         member: 60,
-                        nonMember: 75,
+                        nonMember: 70,
                     }
                 },
                 {
-                    name: 'general.sporty',
+                    name: 'massages.retreat.title',
                     duration: 50,
-                    description: "massages.sports",
+                    description: "massages.retreat.description",
                     price: {
-                        member: 60,
-                        nonMember: 75,
+                        member: 80,
+                        nonMember: 90,
+                    }
+                },
+                {
+                    name: 'massages.lymph.title',
+                    duration: 50,
+                    description: "massages.lymph.description",
+                    price: {
+                        member: 45,
+                        nonMember: 55,
+                    }
+                },
+                {
+                    name: 'massages.neck.title',
+                    duration: 50,
+                    description: "massages.neck.description",
+                    price: {
+                        member: 35,
+                        nonMember: 45,
+                    }
+                },
+                {
+                    name: 'massages.legs.title',
+                    duration: 50,
+                    description: "massages.legs.description",
+                    price: {
+                        member: 35,
+                        nonMember: 45,
+                    }
+                },
+                {
+                    name: 'massages.foot.title',
+                    duration: 50,
+                    description: "massages.foot.description",
+                    price: {
+                        member: 35,
+                        nonMember: 45,
+                    }
+                },
+                {
+                    name: 'massages.head.title',
+                    duration: 50,
+                    description: "massages.head.description",
+                    price: {
+                        member: 20,
+                        nonMember: 30,
+                    }
+                },
+                {
+                    name: 'massages.chinese1.title',
+                    duration: 50,
+                    description: "massages.chinese1.description",
+                    price: {
+                        member: 40,
+                        nonMember: 50,
+                    }
+                },
+                {
+                    name: 'massages.chinese2.title',
+                    duration: 50,
+                    description: "massages.chinese2.description",
+                    price: {
+                        member: 30,
+                        nonMember: 40,
                     }
                 },
             ]
