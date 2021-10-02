@@ -84,7 +84,7 @@ export default {
 
     products: {
         massage: {
-            title: "massage",
+            title: "healing center",
             subtitle: "Your wellbeing in good hands",
         },
         padel: {
