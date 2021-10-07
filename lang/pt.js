@@ -57,6 +57,11 @@ export default {
         weekdays:'Dias da semana'
     },
 
+    opc: {
+        title: "Conheça todas as nossas unidades",
+        btn: "Ver mais"
+    },
+
     massages: {
         relaxing: {
             title: "Massagem de Relaxamento - 50min",

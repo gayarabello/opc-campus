@@ -15,9 +15,26 @@ $ npm run start
 
 # generate static project
 $ npm run generate
-```
+
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+```
+
+## Deploy
+
+```bash
+
+# build for production and launch server
+$ npm run build
+
+# generate static project
+$ npm run generate
+
+# login to firebase
+$ firebase deploy
+
+For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+```
 
 ## Special Directories
 
@@ -40,7 +57,6 @@ More information about the usage of this directory in [the documentation](https:
 Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
 
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
 
 ### `pages`
 

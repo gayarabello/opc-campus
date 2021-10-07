@@ -63,14 +63,29 @@
     <v-main>
       <Nuxt />
     </v-main>
-    <v-footer :absolute="!fixed" app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+    <BannerOPC style="background-color: #083c6a" />
+    <v-footer>
+      <v-container class="py-0 px-0">
+        <v-row>
+          <v-col cols="12" sm="2">
+            <div>&copy; {{ new Date().getFullYear() }}</div>
+          </v-col>
+          <v-col cols="12" sm="6" class="text-md-center">
+            <div><v-icon> mdi-email</v-icon> campus@oportocollection.com</div>
+          </v-col>
+          <v-col cols="12" sm="4" class="text-md-right">
+            <div><v-icon> mdi-phone</v-icon> +351 309 307 016</div>
+          </v-col>
+        </v-row>
+      </v-container>
     </v-footer>
   </v-app>
 </template>
 
 <script>
+import BannerOPC from '~/components/BannerOPC.vue'
 export default {
+  components: { BannerOPC },
   data() {
     return {
       language: 'en',

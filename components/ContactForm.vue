@@ -178,7 +178,7 @@ export default {
 
     sendEmail(e) {
       this.$v.$touch()
-      console.log('submit', this.select, this.name, this.email, this.message)
+      // console.log('submit', this.select, this.name, this.email, this.message)
       let unity = this.units.find((e) => e.name === this.select)
       let service =
         unity.service === 1 ? 'service_amnk2zc' : 'service_5ydwtq8-cps'
@@ -186,7 +186,7 @@ export default {
         unity.service === 1
           ? 'user_tldYcBb4z983aLs4NjWG7'
           : 'user_3g610oF0MnxyYzKbOkJIm'
-      console.log(unity)
+      // console.log(unity)
 
       try {
         emailjs.sendForm(service, unity.template, e.target, user, {

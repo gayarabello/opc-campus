@@ -122,6 +122,10 @@ export default {
             subtitle: "Sessions with a Personal Trainer",
         },
     },
+    opc: {
+        title: "See all units",
+        btn: "See more"
+    },
 
     membershipTable: {
         insurance: "*Insurance included",
