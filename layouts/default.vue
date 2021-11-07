@@ -1,37 +1,8 @@
 <template>
   <v-app>
-    <!--     <v-navigation-drawer
-      v-if="$vuetify.breakpoint.xsOnly"
-      v-model="drawer"
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      fixed
-      app
-    >
-      <v-list>
-        <v-list-item
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          router
-          exact
-        >
-          <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer> -->
     <v-app-bar :clipped-left="clipped" fixed flat app>
       <v-container class="py-0 px-0">
         <v-row align="center" no-gutters justify="space-between">
-          <!--           <v-app-bar-nav-icon
-            v-if="$vuetify.breakpoint.xsOnly"
-            @click.stop="drawer = !drawer"
-          /> -->
           <img
             :height="$vuetify.breakpoint.smAndUp ? 40 : 36"
             width="auto"
@@ -43,6 +14,21 @@
             alt="logo"
             @click="$router.push('/')"
           />
+          <div v-if="$vuetify.breakpoint.smAndUp">
+            <v-btn
+              text
+              class="primary--text"
+              @click="navigateSection('activities')"
+              >{{ $t('general.activities') }}</v-btn
+            >
+            <v-btn
+              text
+              class="primary--text"
+              @click="navigateSection('Healing center')"
+              >Healing Center</v-btn
+            >
+            <a type="tel" class="primary--text"> +351 309 307 016</a>
+          </div>
           <v-select
             v-model="language"
             dense
@@ -108,8 +94,21 @@ export default {
       title: 'Oporto Collection Campus',
     }
   },
+  methods: {
+    navigateSection(section) {
+      this.$nextTick(() =>
+        window.document
+          .getElementById(section)
+          .scrollIntoView({ block: 'nearest', behavior: 'smooth' })
+      )
+    },
+  },
 }
 </script>
 <style lang="scss">
 @import url('~/assets/css/components.scss');
+a {
+  text-decoration: none;
+  font-weight: 700;
+}
 </style>
