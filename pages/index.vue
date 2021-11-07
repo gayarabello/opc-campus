@@ -30,7 +30,10 @@
       </v-row>
     </v-container>
 
-    <ActivitiesMenu @navigate-section-event="navigateSectionEvent" />
+    <ActivitiesMenu
+      id="activities"
+      @navigate-section-event="navigateSectionEvent"
+    />
 
     <MembershipTable id="membership" @show-form="showForm" />
 
@@ -86,7 +89,6 @@ console.log(e)
       this.navigateSection(section)
     },
     navigateSection(section) {
-      console.log('navigateSection', section)
       this.$nextTick(() =>
         window.document
           .getElementById(section)

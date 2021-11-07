@@ -14,12 +14,15 @@
 
     <v-row no-gutters class="py-6" justify="space-between">
       <v-col
+        :style="`max-width: ${100 / activities.length}%; width: ${
+          100 / activities.length
+        }%`"
         style="cursor: pointer"
         v-for="activity in activities"
         :key="activity.title"
-        @click="$emit('navigate-section-event', $t(`general.${activity}`))"
+        @click="handleClick(activity)"
       >
-        <v-img height="170" width="170" :src="prices[activity].hero"></v-img>
+        <v-img width="100%" height="170px" :src="prices[activity].hero"></v-img>
         <h3 class="text-capitalize font-weight-regular py-2">
           {{ activity }} <span class="ml-1">→</span>
         </h3>
@@ -35,14 +38,23 @@ export default {
       prices,
     }
   },
-  mounted() {
-    console.log(this.activities)
+  methods: {
+    handleClick(act) {
+      let param =
+        act === this.$t('products.massage.title')
+          ? $t(`general.${activity}`)
+          : 'Healing center'
+
+      this.$emit('navigate-section-event', param)
+    },
   },
   computed: {
     activities() {
-      return Object.keys(prices).filter(
-        (e) => prices[e].title !== 'products.massage.title'
-      )
+      return this.$vuetify.breakpoint.smAndUp
+        ? Object.keys(prices)
+        : Object.keys(prices).filter(
+            (e) => prices[e].title !== 'products.massage.title'
+          )
     },
   },
 }
