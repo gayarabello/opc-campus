@@ -30,7 +30,7 @@ $ npm run build
 # generate static project
 $ npm run generate
 
-# login to firebase
+# firebase+login to firebase
 $ firebase deploy
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
