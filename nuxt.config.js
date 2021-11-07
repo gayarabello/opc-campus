@@ -6,7 +6,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: "Oporto Collection",
+    titleTemplate: "Campus - Oporto Collection",
     title: "Campus - Oporto Collection",
     htmlAttrs: {
       lang: "en",
