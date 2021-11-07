@@ -69,39 +69,39 @@ export default {
         },
         tissue: {
             title: "Massagem Terapêutica - 50min",
-            description: "Massagem profunda e terapêutica indicada para tratar dores músculo-esqueléticas e problemas articulares, aliviando contraturas musculares bem como outros desequilíbrios fisiológicos."
+            description: "Massagem profunda e terapêutica indicada para tratar dores músculo-esqueléticas e problemas articulares, aliviando contraturas musculares bem como outros distúrbios físicos."
         },
         retreat: {
             title: "Retiro Corpo e Mente - 90min",
-            description: "Este é um tratamento muito completo e especial em que a aromaterapia se conjuga com uma mistura de técnicas terapêuticas como a Abhyanga, o Tui Na, o Shiatsu e a acupressão para o levar numa viagem de cura do corpo, mente e espírito, libertando-o de bloqueios, dores e stress acumulado."
+            description: "Este é um tratamento muito completo e especial em que a aromoterapia se conjuga com uma mistura de técnicas terapêuticas tais como a Abhyanga, o Tui Na, o Shiatsu e a acupressão para curar o seu corpo, mente e espírito, libertando-o de bloqueios, dores e stress acumulado."
         },
         lymph: {
             title: "Drenagem linfática - 50min",
-            description: "A drenagem linfática manual é uma massagem suave e superficial que tem o objectivo de conduzir a linfa até aos gânglios linfáticos, ajudando assim a tratar a retenção de líquidos e o edema, bem como a remover toxinas e melhorar a circulação."
+            description: "A drenagem linfática manual é uma massagem suave que promove o correcto fluxo da linfa ao longo do corpo, ajudando assim a tratar a retenção de líquidos e o edema, bem como a remover toxinas e a melhorar a circulação."
         },
         neck: {
             title: "Costas, ombros e pescoço - 30min",
-            description: "Massagem terapêutica com uso de técnicas como acupressão, Shiatsu e Tui Na para aliviar dores locais nas costas, ombros e pescoço."
+            description: "Massagem terapêutica em que se utilizam técnicas de acupressão, Shiatsu e Tui Na para aliviar dores locais nas costas, ombros e pescoço."
         },
         legs: {
             title: "Pernas cansadas - 30min",
-            description: "Massagem de pernas e pés com utilização de técnicas de drenagem para aliviar a sensação de cansaço e melhorar a circulação sanguínea."
+            description: "Massagem às pernas e pés com uso de técnicas drenantes e relaxantes para aliviar a sensação de membros cansados e melhorar a circulação sanguínea."
         },
         foot: {
             title: "Massagem pés - 30min",
-            description: "Esta massagem aos pés permite entrar num estado de relaxamento profundo e ao mesmo tempo tratar patologias através da reflexologia."
+            description: "Entre num estado de relaxamento profundo e trate patologias através da Reflexologia."
         },
         head: {
-            title: "Massagem Craneal - 15min",
-            description: "Breve massagem craneal e facial com óleos de aromaterapia que ajuda a tratar sintomas como dores de cabeça, enxaquecas, stress mental, ansiedade, sinusite, entre outros."
+            title: "Massagem Sacro-craniana - 15min",
+            description: "Breve massagem craniana e facial com aromoterapia indicada para tratar sintomas como dores de cabeça, enxaquecas, stress mental, ansiedade, sinusite, entre outros."
         },
         chinese1: {
             title: "Medicina Tradicional Chinesa - 1ª sessão - 90min",
-            description: "Terapia holística e ancestral que inclui Acupuntura,  Moxabustão, Auriculoterapia, Ventosaterapia, Fitoterapia, Nutrição, Electrocupuntura e Reflexologia."
+            description: "Terapia holística e ancestral que inclui Acupuntura, Moxabustão, Auriculoterapia, Ventosaterapia, Nutrição, Electroacupuntura e Reflexologia."
         },
         chinese2: {
             title: "Medicina Tradicional Chinesa - Acompanhamento - 60min",
-            description: "Terapia holística e ancestral que inclui Acupuntura,  Moxabustão, Auriculoterapia, Ventosaterapia, Fitoterapia, Nutrição, Electrocupuntura e Reflexologia."
+            description: "Terapia holística e ancestral que inclui Acupuntura, Moxabustão, Auriculoterapia, Ventosaterapia, Nutrição, Electroacupuntura e Reflexologia."
         },
     },
 

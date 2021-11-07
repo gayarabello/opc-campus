@@ -68,19 +68,19 @@ export default {
         },
         retreat: {
             title: "Full Retreat Massage - 90min",
-            description: "This is a very complete and special treatment that uses Aromatherapy and a mix of techniques such as Abhyanga, Tui Na, Shiatsu and Acupressure to heal your body, mind and spirit releasing you from all the blockages, pain and stress you may have accumulated.",
+            description: "This is a very complete and special treatment that uses aromotherapy and a mix of therapeutic techniques such as Abhyanga, Tui Na, Shiatsu, and acupressure to heal your body, mind and spirit releasing you from all the blockages, pain and stress you may have accumulated.",
         },
         lymph: {
             title: "Lymphatic Drainage - 50min",
-            description: "Lymphatic drainage massage is a gentle type of massage that encourages the right movement of lymph fluids around the body, helping to relieve swelling, remove toxins and improve circulatory conditions",
+            description: "Lymphatic drainage is a gentle type of massage that encourages the right movement of lymph fluids around the body helping to relieve swelling, remove toxins and improve circulatory conditions.",
         },
         neck: {
             title: "Neck Pain Relief - 30min",
-            description: "Therapeutic massage with use of acupressure and Tui Na techniques to relief upper back shoulders and neck pain.",
+            description: "Therapeutic massage with use of acupressure, Shiatsu and Tui Na techniques to relieve upper back, shoulders and neck pain.",
         },
         legs: {
             title: "Tired Legs Relief - 30min",
-            description: "Leg and foot massage with use of drainage techniques to relieve the sensation of tired limbs and improve blood circulation.",
+            description: "Leg and foot massage with use of drainage and relaxing techniques to relieve the sensation of tired limbs and improve blood circulation.",
         },
         foot: {
             title: "Foot Massage - 30min",
@@ -88,15 +88,15 @@ export default {
         },
         head: {
             title: "Head Stress Relief - 15min",
-            description: "Quick head and facial massage with aromatherapy oils that will help to treat conditions such as headaches, migraines, mental stress, anxiety, sinusitis and others.",
+            description: "Quick head and facial massage with aromotherapy oils that will help to treat conditions such as headaches, migraines, mental stress, anxiety, sinusitis and others.",
         },
         chinese1: {
             title: "Traditional Chinese Medicine - 1st session - 90min",
-            description: "Holistic and Ancestral Therapy that includes Acupunture, Moxibustion, Auriculostrerapy, Cupping therapy, Phytotherapy, Nutrition, Electroacupunture and Reflexology.",
+            description: "Holistic and ancestral therapy that includes Acupuncture, Moxibustion, Auriculotherapy, Cupping therapy, Phytotherapy, Nutrition, Electroacupuncture and Reflexology.",
         },
         chinese2: {
             title: "Traditional Chinese Medicine - Following sessions - 60min",
-            description: "Holistic and Ancestral Therapy that includes Acupunture, Moxibustion, Auriculostrerapy, Cupping therapy, Phytotherapy, Nutrition, Electroacupunture and Reflexology.",
+            description: "Holistic and ancestral therapy that includes Acupuncture, Moxibustion, Auriculotherapy, Cupping therapy, Phytotherapy, Nutrition, Electroacupuncture and Reflexology.",
         },
     },
 
