@@ -323,7 +323,7 @@ export default Vue.extend({
       plans: [
         {
           name: 'general.annual',
-          price: 700,
+          price: 600,
         },
         {
           name: 'general.months3',

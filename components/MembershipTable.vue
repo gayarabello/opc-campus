@@ -25,7 +25,7 @@
           v-for="(price, index) in [
             {
               name: 'general.annual',
-              price: 700,
+              price: 600,
             },
             {
               name: 'general.months3',
