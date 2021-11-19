@@ -37,7 +37,25 @@ export default {
         pilates: "pilates",
         yoga: "yoga",
         lightAditional: "Light Aditional",
+        free:"Free",
+        
     },
+
+    court:{
+        "60": "Court | 60min",
+        "90": "Court | 90min",
+    },
+
+    shift: {
+        day: "1st shift | 09h - 17h",
+        night: "2nd shift | 17h - 22h"
+    },
+    group:{
+        equipment: 'Equipment',
+        weekends:'weekends',
+        weekdays:'weekdays'
+    },
+
 
     massages: {
         relaxing: {
@@ -101,7 +119,7 @@ export default {
         },
         fitness: {
             title: "fitness",
-            subtitle: "Become the best version of yourself",
+            subtitle: "Sessions with a Personal Trainer",
         },
     },
 

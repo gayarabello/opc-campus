@@ -53,13 +53,14 @@
       </h3>
 
       <div v-for="(item, index) in activity.prices[key]" :key="index">
+        <h4 class="text-center text-uppercase mt-6" v-if="item.group">{{$t(item.group)}}</h4>
         <v-row class="py-3" no-gutters>
           <v-col cols="7" sm="9">
             <h4 class="text-capitalize">
               {{ $t(item.name) }}
             </h4>
 
-            <h5 class="font-weight-regular" v-if="item.description">
+            <h5 v-if="item.description" class="font-weight-regular">
               {{ $t(item.description) }}
             </h5>
           </v-col>
@@ -73,13 +74,17 @@
         </v-row>
         <v-divider v-if="index !== activity.prices[key].length - 1"></v-divider>
       </div>
+     
       <div class="text-center">
-        <v-btn
+        
+         <v-btn
+          v-if="key !== 'rent'"
           outlined
           color="primary"
           @click="$emit('show-form', { activity, key })"
           >{{ $t('general.schedule') }}</v-btn
-        >
+        > 
+       
       </div>
     </div>
   </div>
@@ -88,19 +93,23 @@
 import Vue from 'vue'
 export default Vue.extend({
   components: {},
-  data() {
-    return {
-      formDialog: false,
-    }
-  },
 
   props: {
     activity: {
       type: Object,
+      required: false,
+
     },
     forKey: {
       type: String,
+      required: false,
+      default:  ''
     },
+  },
+  data() {
+    return {
+      formDialog: false,
+    }
   },
   methods: {
     confirmClose() {

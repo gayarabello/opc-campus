@@ -38,50 +38,85 @@ export const prices = {
                     }
                 },
             ],
-            rent: [
+            rent: [                
                 {
-                    name: "general.court60min",
+                    name: "court.60",
+                    description: "shift.day",
+                    group: 'group.weekdays',
                     price: {
                         member: 15,
+                        nonMember: 20
+                    }
+                },
+              
+                {
+                    name: "court.90",
+                    description: "shift.day",
+                    price: {
+                        member: 20,
                         nonMember: 25
                     }
                 },
                 {
-                    name: "general.court90min",
+                    name: "court.60",
+                    description: "shift.night",
                     price: {
                         member: 25,
                         nonMember: 35
                     }
                 },
                 {
-                    name: "general.courtHalfDay",
+                    name: "court.90",
+                    description: "shift.night",
                     price: {
-                        member: 60,
-                        nonMember: 75
+                        member: 30,
+                        nonMember: 40
                     }
                 },
                 {
-                    name: "general.courtFullDay",
+                    name: "court.60",
+                    description: "shift.day",
+                    group: "group.weekends",
                     price: {
-                        member: 110,
-                        nonMember: 130
+                        member: 30,
+                        nonMember: 40
                     }
                 },
-
+                {
+                    name: "court.90",
+                    description: "shift.day",
+                    price: {
+                        member: 35,
+                        nonMember: 45
+                    }
+                },
+                {
+                    name: "court.60",
+                    description: "shift.night",
+                    price: {
+                        member: 35,
+                        nonMember: 45
+                    }
+                },
+               
+                {
+                    name: "court.90",
+                    description: "shift.night",
+                    price: {
+                        member: 40,
+                        nonMember: 50
+                    }
+                },
+  
                 {
                     name: "general.racketAndBalls",
+                    group: 'group.equipment',
                     price: {
                         member: "Free",
                         nonMember: 7.5
                     }
                 },
-                {
-                    name: "general.lightAditional",
-                    price: {
-                        member: `+€5`,
-                        nonMember: `+€5`
-                    }
-                },
+             
             ]
         }
     },
@@ -123,6 +158,7 @@ export const prices = {
             ],
         }
     },
+
     fitness: {
         hash: "general.activities",
         title: "products.fitness.title",
@@ -336,5 +372,4 @@ export const prices = {
             ]
         }
     },
-
 }
