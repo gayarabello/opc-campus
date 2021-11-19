@@ -126,7 +126,6 @@
             confirmation
           </h5> -->
         </v-card-title>
-
         <v-card-text class="px-2">
           <div v-if="loading" class="text-center py-12">
             <v-progress-circular indeterminate size="64" />
@@ -151,10 +150,10 @@
                       clickedActivity['activity']['prices'][clickedActivity.key]
                     "
                     v-model="selectedActivity"
-                    :item-value="(e) => $t(e.name)"
+                    :item-value="(e) => `${$t(e.name)}${$t(e.description)}${$t(e.group)}`"
                     :item-text="
                       (e) =>
-                        `${$t(e.name)} - ${$tc('member')}: ${
+                        ` ${$t(e.name)} - ${$tc('member')}: ${
                           e.price.member
                         }€ / ${$tc('nonMember')}:${e.price.nonMember}€`
                     "
@@ -276,7 +275,9 @@
     </v-dialog>
   </div>
 </template>
+
 <script>
+
 import Vue from 'vue'
 import { validationMixin } from 'vuelidate'
 import { required, email, minLength } from 'vuelidate/lib/validators'
@@ -284,6 +285,7 @@ import emailjs from 'emailjs-com'
 import Swal from 'sweetalert2'
 
 export default Vue.extend({
+  
   mixins: [validationMixin],
   validations: {
     form: {
@@ -348,6 +350,7 @@ export default Vue.extend({
     }
   },
   watch: {
+
     showMembershipDialog() {
       this.selectedPlan = this.$t(this.plans[0].name)
     },
@@ -410,6 +413,7 @@ export default Vue.extend({
   },
 
   methods: {
+    
     goNext() {
       this.step += 1
     },

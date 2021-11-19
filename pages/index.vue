@@ -41,7 +41,6 @@
       v-for="(activity, key) in services"
       :key="key"
     />
-
     <FormDialog
       :clickedActivity="activity"
       :showActivityDialog="showActivityDialog"
@@ -76,7 +75,7 @@ export default Vue.extend({
   methods: {
     showForm(e) {
       e ? (this.showActivityDialog = true) : (this.showMembershipDialog = true)
-
+console.log(e)
       this.activity = e
     },
     confirmClose() {

@@ -37,6 +37,24 @@ export default {
         pilates: "pilates",
         yoga: "ioga",
         lightAditional: "Com iluminação",
+        free:"Gratuito",
+
+    },
+
+    court:{
+        "60": "Campo | 60min",
+        "90": "Campo | 90min",
+    },
+
+    shift: {
+        day: "1° turno | 09h - 17h",
+        night: "2° turno | 17h - 22h"
+    },
+
+    group:{
+        equipment: 'Equipamento',
+        weekends:'Fim de semana',
+        weekdays:'Dias de semana'
     },
 
     massages: {
@@ -101,7 +119,7 @@ export default {
         },
         fitness: {
             title: "fitness",
-            subtitle: "Torne-se a sua melhor versão",
+            subtitle: "Aulas com Personal Trainer",
         },
     },
 
@@ -110,8 +128,8 @@ export default {
         addMember: "Adicionar mais um membro",
         step01: "Acesso total às instalações do Campus e à área social do Hotel",
         step02: "Prioridade em horários em aulas particulares de Padel",
-        step03: "Prioridade em horários em aulas de Fitness e Pilates",
-        step04: "Desconto em tratamentos Welness",
+        step03: "Prioridade em horários para aulas de Personal Training e Pilates",
+        step04: "Desconto em tratamentos do Healing Center",
         step05: "Descontos em packs Fitness, Pilates e Padel",
         step06: "Desconto no aluguer do campo de Padel",
         step07: "Desconto no aluguer de bicicletas",
