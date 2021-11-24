@@ -37,11 +37,11 @@ export default {
         pilates: "pilates",
         yoga: "ioga",
         lightAditional: "Com iluminação",
-        free:"Gratuito",
+        free: "Gratuito",
 
     },
 
-    court:{
+    court: {
         "60": "Campo | 60min",
         "90": "Campo | 90min",
     },
@@ -51,10 +51,10 @@ export default {
         night: "2° turno | 17h - 22h"
     },
 
-    group:{
+    group: {
         equipment: 'Equipamento',
-        weekends:'Fim de semana',
-        weekdays:'Dias da semana'
+        weekends: 'Fim de semana',
+        weekdays: 'Dias da semana'
     },
 
     opc: {
@@ -107,7 +107,7 @@ export default {
 
     products: {
         massage: {
-            title: "Healing center",
+            title: "healing center",
             subtitle: "O seu bem-estar em boas mãos",
         },
         padel: {

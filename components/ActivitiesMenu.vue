@@ -43,7 +43,7 @@ export default {
       let param =
         act === this.$t('products.massage.title')
           ? $t(`general.${activity}`)
-          : 'Healing center'
+          : 'healing center'
 
       this.$emit('navigate-section-event', param)
     },

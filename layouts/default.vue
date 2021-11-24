@@ -24,7 +24,7 @@
             <v-btn
               text
               class="primary--text"
-              @click="navigateSection('Healing center')"
+              @click="navigateSection('healing center')"
               >Healing Center</v-btn
             >
             <a type="tel" class="primary--text"> +351 309 307 016</a>
@@ -96,6 +96,7 @@ export default {
   },
   methods: {
     navigateSection(section) {
+      console.log(section)
       this.$nextTick(() =>
         window.document
           .getElementById(section)
