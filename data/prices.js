@@ -4,7 +4,7 @@ export const prices = {
     padel: {
         hash: "general.activities",
         title: "products.padel.title",
-        hero: "https://res.cloudinary.com/oporto-/image/upload/v1630319426/campus/padel_p8iine.jpg",
+        hero: "https://res.cloudinary.com/oporto-/image/upload/v1637881849/campus/IMG_1518a_2_uwvbgr.jpg",
         subtitle: "products.padel.subtitle",
         hours: schedules.default,
         prices: {
@@ -125,7 +125,7 @@ export const prices = {
         hash: "general.activities",
         title: "products.pilates.title",
         subtitle: "products.pilates.subtitle",
-        hero: "https://res.cloudinary.com/oporto-/image/upload/v1630319426/campus/pilates_mafpjs.jpg",
+        hero: "https://res.cloudinary.com/oporto-/image/upload/v1637882082/campus/Z06_2591_bysqab.jpg",
         hours: schedules.default,
         prices: {
             classes: [
@@ -163,7 +163,7 @@ export const prices = {
         hash: "general.activities",
         title: "products.fitness.title",
         subtitle: "products.fitness.subtitle",
-        hero: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+        hero: "https://res.cloudinary.com/oporto-/image/upload/v1637882083/campus/Z06_2506_tfy9sz.jpg",
         hours: schedules.default,
         prices: {
             classes: [
@@ -275,7 +275,7 @@ export const prices = {
         hash: "general.wellness",
         title: "products.massage.title",
         subtitle: "products.massage.subtitle",
-        hero: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80",
+        hero: "https://res.cloudinary.com/oporto-/image/upload/v1637881849/campus/Z06_2880_2_popwh1.jpg",
         hours: schedules.default,
         prices: {
             treatments: [
