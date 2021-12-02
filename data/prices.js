@@ -125,7 +125,7 @@ export const prices = {
         hash: "general.activities",
         title: "products.pilates.title",
         subtitle: "products.pilates.subtitle",
-        hero: "https://res.cloudinary.com/oporto-/image/upload/v1637882082/campus/Z06_2591_bysqab.jpg",
+        hero: "https://res.cloudinary.com/oporto-/image/upload/v1638480003/campus/IMG_0419_quyh7y.jpg",
         hours: schedules.default,
         prices: {
             classes: [
